@@ -185,31 +185,13 @@ body {
 
 /* Experience-section */
 
-/* .experience-section-top {}
-
-.experience-section-top-contents {} */
-
-@media (max-width: 650px) {
-    .experience-section-top {
-        /* height: 65vh; */
-    }
-}
-
-@media (min-width: 650px) and (max-width: 991.98px) {
-    .experience-section-top {
-        /* height: 95vh; */
-    }
-}
-
-@media (min-width: 992px) {
-    .experience-section-top {
-        /* height: 95vh; */
-    }
-}
-
 .experience-section-bottom {
     background-color: #FFF6E3;
     width: 100%;
+}
+
+.work-experience-category h3 {
+    letter-spacing: 1px;
 }
 
 
@@ -302,16 +284,8 @@ body {
 .social-media-handles-icon {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
-}
-
-.social-media-handles-icon img,
-.social-media-handles-icon svg {
-    height: 2.5rem;
-    width: 2.5rem;
-    padding: 0;
-    margin: 0;
-    /* border-radius: 100px; */
 }
 
 .contact-section {
@@ -321,12 +295,14 @@ body {
 
 .social-media-handles-icon a {
     background-color: #27303B;
-    border-radius: 100px;
+    border-radius: 1000px;
     padding: 13px;
+    border: 4px solid #c89723;
 }
 
 .social-media-handles-icon a {
     width: min-content;
+    height: min-content;
     display: inline-block;
 }
 
@@ -340,11 +316,27 @@ body {
     .social-media-handles {
         padding: 0px 20%;
     }
+
+    .social-media-handles-icon img,
+    .social-media-handles-icon svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 @media (min-width: 650px) and (max-width: 991.98px) {
     .social-media-handles {
         padding: 0px 10%;
+    }
+
+    .social-media-handles-icon img,
+    .social-media-handles-icon svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -353,4 +345,107 @@ body {
     .social-media-handles {
         padding: 0px 20%;
     }
+
+    .social-media-handles-icon img,
+    .social-media-handles-icon svg {
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.form-for-contact {
+    font-family: "Kanit", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form-back-circle-1 {
+    height: 60vw;
+    width: 60vw;
+    position: absolute;
+    background-color: #FFF6E3;
+    border-radius: 30vw;
+    left: -10%;
+    z-index: -1;
+}
+
+.contact-form-back-circle-2 {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    background-color: #FFF6E3;
+    border-radius: 15vw;
+    top: -20%;
+    right: -10%;
+    z-index: -1;
+}
+
+.submit-btn {
+    background-color: #fff !important;
+    border: 1px solid black !important;
+    text-align: center;
+}
+
+
+@media (max-width: 650px) {
+    .social-media-handles-icon {
+        height: 20vh;
+        overflow: hidden;
+    }
+
+    .contact-form-back-circle-2 {
+        height: 60vw;
+        width: 60vw;
+        position: absolute;
+        background-color: #FFF6E3;
+        border-radius: 30vw;
+        top: 40%;
+        right: -10%;
+        z-index: -1;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 991.98px) {
+    .social-media-handles-icon {
+        height: 30vh;
+        overflow: hidden;
+    }
+
+    .contact-form-back-circle-2 {
+        height: 30vw;
+        width: 30vw;
+        position: absolute;
+        background-color: #FFF6E3;
+        border-radius: 15vw;
+        top: 10%;
+        right: -7%;
+        z-index: -1;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .social-media-handles-icon {
+        overflow: hidden;
+    }
+
+    .contact-form-back-circle-2 {
+        height: 30vw;
+        width: 30vw;
+        position: absolute;
+        background-color: #FFF6E3;
+        border-radius: 15vw;
+        top: -20%;
+        right: -10%;
+        z-index: -1;
+    }
+}
+
+/* My services */
+.my-services-content {
+    background-color: #FFF6E3;
+    border-radius: 30px;
+    /* height: 200px; */
 }
