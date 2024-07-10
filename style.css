@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* NavBar */
+.navbar-container {
+    margin: 0% 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-contents {
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 5px 25px !important;
+}
+
+.nav-item {
+    background-color: #FFF6E3 !important;
+    border-radius: 100px !important;
+    padding: 0px 20px !important;
+    outline: none;
+}
+
+.navbar-brand img {
+    height: 2rem;
+    width: auto;
+    object-fit: cover;
+}
+
+.home-section {
+    width: 100%;
+    background: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 650px) {
+    .home-section {
+        height: 30vh;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 991.98px) {
+    .home-section {
+        height: 60vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-section {
+        height: 100vh;
+    }
+}
+
+.home-section-content {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.back-circle {
+    background-color: #FFF6E3;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 1000px;
+    object-fit: contain;
+}
+
+.home-section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 12;
+    left: 35%;
+}
+
+.home-section-text h2 {
+    font-size: 6vw;
+    letter-spacing: 3px;
+    width: max-content;
+    font-family: "Dancing Script", cursive;
+    color: #27303B;
+    margin: 0px;
+    padding: 0px;
+}
+
+.home-section-text h1 {
+    font-size: 6vw;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px #27303B;
+    width: max-content;
+    font-family: "Kanit", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.home-section-text-special {
+    font-size: 6vw;
+    font-weight: bold;
+    color: transparent;
+    width: max-content;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    font-family: "Kanit", sans-serif;
+}
+
+/* About Section */
+.about-section {
+    justify-content: center;
+}
+
+.about-section-left {
+    background-color: #FFF6E3;
+}
+
+.about-section-left-header {
+    line-height: 30px;
+}
+
+.about-section-left-1 {
+    font-size: 4vw;
+    padding: 0px;
+    margin: 0px;
+    width: max-content;
+    font-family: "Dancing Script", cursive;
+}
+
+.about-section-left-2 {
+    font-size: 4vw;
+    font-weight: 600;
+    width: max-content;
+    margin: 0px 0px 0px 13px;
+    font-family: "Kanit", sans-serif;
+}
+
+.about-section-left-3 {
+    font-size: 1.6vw;
+    margin: 25px 0px 0px 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+/*About-section-right */
+.about-section-right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.about-section-right-content img {
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    background-color: #FFF6E3;
+    border-radius: 30vw;
+}
+
+.about-section-right-content h2 {
+    font-size: 5vw;
+    width: max-content;
+    font-family: "Dancing Script", cursive;
+}
+
+@media (max-width: 650px) {
+    .about-section {
+        height: 35vh;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 991.98px) {
+    .about-section {
+        height: 65vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-section {
+        height: 85vh;
+    }
+}
+
+/* Experience-section */
+
+/* .experience-section-top {}
+
+.experience-section-top-contents {} */
+
+@media (max-width: 650px) {
+    .experience-section-top {
+        /* height: 700px; */
+    }
+}
+
+@media (min-width: 650px) and (max-width: 991.98px) {
+    .experience-section-top {
+        height: 95vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .experience-section-top {
+        height: 95vh;
+    }
+}
+
+.experience-section-bottom {
+    background-color: #FFF6E3;
+}
+
+
+/* Experience-section-bottom */
+.experience-section-bottom-contents {
+    display: flex;
+    justify-content: center;
+}
+
+.experience-section-bottom-domains {
+    text-align: start;
+}
+
+.experience-section-bottom-content h6 {
+    /* font-size: 1rem; */
+    padding: 0px;
+    margin: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+.experience-section-bottom-content p {
+    /* font-size: .8rem; */
+    font-family: "Kanit", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    color: darkgrey;
+}
