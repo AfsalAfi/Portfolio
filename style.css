@@ -118,6 +118,7 @@
 /* About Section */
 .about-section {
     justify-content: center;
+    height: 100vh;
 }
 
 .about-section-left {
@@ -129,7 +130,7 @@
 }
 
 .about-section-left-1 {
-    font-size: 4vw;
+    font-size: 2.5rem;
     padding: 0px;
     margin: 0px;
     width: max-content;
@@ -137,7 +138,7 @@
 }
 
 .about-section-left-2 {
-    font-size: 4vw;
+    font-size: 2.5rem;
     font-weight: 600;
     width: max-content;
     margin: 0px 0px 0px 13px;
@@ -145,7 +146,7 @@
 }
 
 .about-section-left-3 {
-    font-size: 1.6vw;
+    font-size: 1rem;
     margin: 25px 0px 0px 0px;
     font-family: "Kanit", sans-serif;
 }
@@ -160,36 +161,20 @@
 }
 
 .about-section-right-content img {
-    width: 30vw;
-    height: 30vw;
+    width: 18rem;
+    height: 18rem;
     object-fit: cover;
     background-color: #FFF6E3;
-    border-radius: 30vw;
+    border-radius: 20rem;
 }
 
 .about-section-right-content h2 {
-    font-size: 5vw;
+    font-size: 3rem;
     width: max-content;
     font-family: "Dancing Script", cursive;
 }
 
-@media (max-width: 650px) {
-    .about-section {
-        height: 35vh;
-    }
-}
 
-@media (min-width: 650px) and (max-width: 991.98px) {
-    .about-section {
-        height: 65vh;
-    }
-}
-
-@media (min-width: 992px) {
-    .about-section {
-        height: 85vh;
-    }
-}
 
 /* Experience-section */
 
@@ -199,19 +184,19 @@
 
 @media (max-width: 650px) {
     .experience-section-top {
-        /* height: 700px; */
+        /* height: 65vh; */
     }
 }
 
 @media (min-width: 650px) and (max-width: 991.98px) {
     .experience-section-top {
-        height: 95vh;
+        /* height: 95vh; */
     }
 }
 
 @media (min-width: 992px) {
     .experience-section-top {
-        height: 95vh;
+        /* height: 95vh; */
     }
 }
 
