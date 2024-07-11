@@ -49,7 +49,7 @@
         </div>
     </nav>
     <!-- Home Section -->
-    <div class="home-section" id="home-section">
+    <header class="home-section" id="home-section">
         <div class="home-section-content">
             <div class="back-circle"></div>
             <div class="home-section-text">
@@ -57,9 +57,9 @@
                 <h1><span class="home-section-text-special">WEB </span>DEVELOPER</h1>
             </div>
         </div>
-    </div>
+    </header>
     <!-- About Section -->
-    <div class="container-fluid row about-section px-4" id="about-section">
+    <section class="container-fluid row about-section px-4" id="about-section">
         <div class="col-xs-12 col-lg-6 order-2 order-lg-1 about-section-left rounded align-content-center p-5">
             <div class="about-section-left-header">
                 <p class="about-section-left-1">introducing</p>
@@ -82,9 +82,9 @@
                 <h2>Afsal M</h2>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Experience Section -->
-    <div class="container-fluid row experience-section-top py-5 " id="experience-section-top">
+    <section class="container-fluid row experience-section-top py-5 " id="experience-section-top">
         <div class="col-xs-12 col-lg-6 rounded align-content-center py-5">
             <div class="about-section-left-header">
                 <p class="about-section-left-1">Project</p>
@@ -114,8 +114,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row experience-section-bottom p-4">
+    </section>
+    <section class="row experience-section-bottom p-4">
         <div class="container-fluid p-4 d-flex flex-column justify-content-around ">
             <div class="container-fluid text-center work-experience-category">
                 <h3>Backend Development</h3>
@@ -169,10 +169,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- My Services -->
-    <div class="container-fluid recent-works px-4 py-5" id="services">
+    <section class="container-fluid recent-works px-4 py-5" id="services">
         <div class="rounded align-content-center my-service-section">
             <div class="about-section-left-header">
                 <p class="about-section-left-1">My</p>
@@ -202,10 +202,10 @@
             </div>
         </div>
 
-    </div>
+    </section>
 
     <!-- Recent works -->
-    <div class="container-fluid recent-works px-4 py-5" id="projects">
+    <section class="container-fluid recent-works px-4 py-5" id="projects">
         <div class="recent-works-background-image"></div>
         <div class="col-xs-12 col-lg-6 rounded align-content-center">
             <div class="about-section-left-header">
@@ -256,10 +256,10 @@
                 </p>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Contact Me -->
-    <div class="container-fluid row" id="contact">
+    <footer class="container-fluid row" id="contact">
         <div class="row">
             <div class="about-section-left-header">
                 <p class="about-section-left-1">Get in</p>
@@ -269,28 +269,29 @@
         <!-- social-media-handles -->
         <div class="col-xs-12 col-lg-8 d-flex justify-content-center mt-2 p-md-3 form-for-contact">
             <div class="contact-form-back-circle-1"></div>
-            <form class="w-75" id="submit-form" action="">
+            <form class="w-75" id="submit-form" action="" onsubmit="return validatePhoneNumber(event)">
                 <div class="mb-3">
                     <div class="d-flex">
                         <hr>
                         <label for="exampleInputEmail1" class="form-label">Name</label>
                     </div>
                     <input type="text" class="form-control" id="Name" name="name" aria-describedby="emailHelp"
-                        placeholder="Ranveer">
+                        placeholder="Ranveer" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="Email" name="email" aria-describedby="emailHelp"
-                        placeholder="ranveer@gmail.com">
+                        placeholder="ranveer@gmail.com" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="Phone Number" name="phone number"
-                        aria-describedby="emailHelp" placeholder="+91 9897969493">
+                    <input type="text" class="form-control" id="PhoneNumber" name="phone number"
+                        aria-describedby="emailHelp" placeholder="+91 9897969493" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">How can i help you</label>
-                    <textarea class="form-control" name="message" id="content" rows="6" placeholder="...."></textarea>
+                    <textarea class="form-control" name="message" id="content" rows="6" placeholder="...."
+                        required></textarea>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn submit-btn">Submit</button>
@@ -319,11 +320,21 @@
                 </svg>
             </a>
         </div>
-    </div>
-
+    </footer>
 
     <script>
-        $("#submit-form").submit((e) => {
+        function validatePhoneNumber(event) {
+            event.preventDefault();
+            const phoneNumber = document.getElementById('PhoneNumber').value;
+            const regex = /^[0-9]+$/;
+            if (!regex.test(phoneNumber)) {
+                alert('Please enter a valid phone number without any letters.');
+            } else {
+                sendEmail(event);
+            }
+        }
+
+        function sendEmail(e) {
             e.preventDefault()
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbwFhyVOvG2EdnSeX-vsVZqgnd_WKsoN7D2EMdGqqzM3rgrT3paT5-u20vJV5nPD7w5X/exec",
@@ -335,11 +346,11 @@
                 },
                 error: function (err) {
                     alert("Something Error")
-
                 }
             })
-        })
+        }
     </script>
+
 </body>
 
 </html>
